@@ -16,6 +16,7 @@ public class HelloWorldApp {
 		//below calls a method on the Bean
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach2.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
 		//close out the context at the end
 		context.close();
 	}

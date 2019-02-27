@@ -9,10 +9,13 @@
 
 	
     <!-- Define your beans here -->
-    <bean id="myCoach" class="com.mikemcfarlin.springdemo1.TrackCoach"></bean>
-    <bean id="footballCoach" class="com.mikemcfarlin.springdemo1.FootballCoach"></bean>
     <!-- define the dependency -->
-
+    <bean id="myCoach" class="com.mikemcfarlin.springdemo1.BaseBallCoach">
+    	<constructor-arg ref="myFortuneService" />
+    </bean>
+    <bean id="footballCoach" class="com.mikemcfarlin.springdemo1.FootballCoach"></bean>
+    
+	<bean id="myFortuneService" class="com.mikemcfarlin.springdemo1.HappyFortuneService"></bean>
 
 </beans>
 
